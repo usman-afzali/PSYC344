@@ -1,0 +1,23 @@
+---
+title: "Intermediate Research Methods and Statistics"
+subtitle: "Labs with `R` and Presentations"
+image: p_values.jpg
+
+about:
+  template: jolla
+  links:
+    - icon: twitter
+      text: UsmanAfzali
+      href: https://twitter.com/UsmanAfzali
+    - icon: link
+      text: Usman Afzali
+      href: https://www.usmanafzali.com  
+    - icon: linkedin
+      text: Usman Afzali
+      href: https://www.linkedin.com/in/usman-afzali-086147a4/
+    - icon: github
+      text: usman-afzali
+      href: https://github.com/usman-afzali
+---
+
+By Usman Afzali, PhD

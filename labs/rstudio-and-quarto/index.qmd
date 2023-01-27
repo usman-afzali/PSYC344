@@ -1,0 +1,230 @@
+---
+title: "Lab 5: Hypothesis testing with _t_-tests"
+author: "Usman Afzali and Bethany Growns"
+code-fold: true
+toc: true
+filters:
+   - lightbox
+lightbox: auto
+---
+
+In this lab, you will be conducting *t*-tests with Jamovi and practice reporting results in APA-style format. As you heard in the lectures, we will always encounter violations of assumptions when dealing with real-life data. This lab exercise has many such instances and we will practice how to choose from non-parametric tests when assumptions are violated. We will also be reporting effect sizes. Note the interpretation guidelines for "Cohen's *d*" and for "Rank biserial correlation" (0.2 = 'small'; 0.5 = 'medium'; 0.8 = 'large'). This lab is important because you will learn how to choose a statistical analysis plan based on the research question, how variables were measured, and the characteristics of the dataset. These are important skills that will be assessed in your Lab Report.
+
+#### Learning outcomes
+
+At the end of this lab you will be able to: 1) Conduct and interpret a *t*-test with Jamovi. 2) Check assumptions and decide the corresponding non-parametric tests when needed. 3) Report findings in APA-style.
+
+## Task 1: Living with partner and getting on
+
+Did people who lived with their partner get on better or worse with their cohabitant(s) over lockdown than people who did not live with a partner?
+
+**Q1.** Open the dataset that we used in one of the previous labs (you can download the 'Lab 5 dataset.xlsx' file from the lab section on Learn). Read through the codebook to get an understanding of the survey questions in the dataset. Let's have a look at the `structure` too.
+
+```{r}
+library(readxl)
+df <- read_xlsx("Lab 5 Dataset.xlsx")
+str(df)
+```
+
+We need to remove the first row.
+
+```{r}
+col <- 1
+df <- df[-c(1), ]
+str(df)
+```
+
+**Q2.** First we are going to investigate whether people who lived with their partner get on better or worse with their cohabitant(s) over lockdown than people who did not live with a partner. From your understanding of the codebook, what is your independent variable and what is your dependent variable?
+
+**Q3.** What type of analysis is appropriate given these variables?
+
+**HINT:** Use your statistics decision-making tree and your codebook to help you with this question.
+
+Better to rename our variables and also make sure the variable types are appropriate for analysis.
+
+```{r}
+library(tidyverse)
+df <- df %>%
+  mutate(gettingOn = as.numeric(COV_7)) %>%
+  mutate(livedPartner = as.character(COV_5a))
+```
+
+Let's get a boxplot to make sure
+
+```{r}
+boxplot(gettingOn ~ livedPartner, data = df)
+```
+
+Generally, we would go for a *t*-test for independent means.
+
+```{r}
+t.test(gettingOn ~ livedPartner, alt = "two.sided", conf = 0.95, var.eq = T, data = df)
+```
+
+**Q4.** Test the assumptions of `homogeneity` and `normality`. What is the conclusion of your assumption tests? What does this mean for hypothesis testing?
+
+**NOTE:** Violation of normality can be better understood graphically---if you run descriptives and create histograms graphs of your study variables, you can see more easily that the curve is not normal.
+
+Let's look at `normality` first.
+
+```{r}
+shapiro.test (df$gettingOn)
+```
+
+Now, to `homogneity of variance`.
+
+```{r}
+car::leveneTest(gettingOn ~ livedPartner, df)
+```
+
+As we can see, the assumption of normality is violated. So, let's conduct a `Mann-Whitney U test` instead.
+
+```{r}
+wilcox.test(gettingOn ~ livedPartner, df)
+```
+
+**Q5.** In the 'Additional statistics', select 'Effect size', 'Descriptives', and 'Descriptives plots'. Report your NHST results and interpret your findings:
+
+a)  Mean or Median scores for each group on the dependent variable
+b)  The appropriate statistic (*t* or otherwise)
+c)  Significance (or otherwise) of the test
+d)  Effect size
+
+**NOTE:** A measure of effect size for a t-test is the Cohen's d. A measure of effect size for a non-parametric test is the rank biserial correlation.
+
+Let's do the rest of it with `jamovi`. The outcome is a bit different because they might be using different packages.
+
+```{r}
+jmv::ttestIS(
+  formula = gettingOn ~ COV_5a,
+  data = df,
+  vars = gettingOn,
+  students = FALSE,
+  mann = TRUE,
+  norm = TRUE,
+  eqv = TRUE,
+  effectSize = TRUE,
+  desc = TRUE)
+```
+
+## Task 2: Change in living arrnagement and getting on
+
+Did people whose living arrangements changed just prior to lockdown get on better or worse with their cohabitant(s) than those whose living arrangements stayed the same?
+
+**Q6.** Now we are going to investigate whether people whose living arrangements changed just prior to lockdown get on better or worse with their cohabitant(s) than those whose living arrangements stayed the same. From your understanding of the codebook, what is your independent variable and what is your dependent variable?
+
+**Q7.** What type of analysis is appropriate given these variables?
+
+Renaming
+
+```{r}
+library(tidyverse)
+df <- df %>%
+  mutate(changedCond = as.factor(COV_6))
+```
+
+Now, the `t-test`
+
+```{r}
+t.test(gettingOn ~ changedCond, alt = "two.sided", conf = 0.95, var.eq = T, data = df)
+```
+
+**Q8.** In 'Assumption checks', select 'Homogeneity test' and 'Normality test'. What is the conclusion of your assumption tests? What does this mean for hypothesis testing?
+
+**Q9.** In the 'Additional statistics', select 'Effect size', 'Descriptives', and 'Descriptives plots'. Report your NHST results and interpret your findings:
+
+a)  Mean or Median scores for each group on the dependent variable
+b)  The appropriate statistic (*t* or otherwise)
+c)  Significance (or otherwise) of the test
+d)  Effect size
+
+Assumptions: We already know that normality is violated.
+
+```{r}
+shapiro.test (df$gettingOn)
+```
+
+Homogeneity of variance
+
+```{r}
+car::leveneTest(gettingOn ~ changedCond, df)
+```
+
+Mann-Whitney U test
+
+```{r}
+wilcox.test(gettingOn ~ changedCond, df)
+```
+
+Or, with code from `jamovi`.
+
+```{r}
+jmv::ttestIS(
+  formula = gettingOn ~ COV_5a,
+  data = df,
+  vars = gettingOn,
+  students = FALSE,
+  mann = TRUE,
+  norm = TRUE,
+  eqv = TRUE,
+  effectSize = TRUE,
+  desc = TRUE)
+```
+
+## Task 3: Male and female vs. govt decision
+
+Did males and females differ with respect to their level of agreement with the government's decision to implement the lockdown?
+
+**Q10.** Now we're going to see whether males and females differed with respect to their level of agreement with the government's decision to implement the lockdown. From your understanding of the codebook, what is your independent variable and what is your dependent variable?
+
+**Q11.** What type of analysis is appropriate given these variables?
+
+Renaming
+
+```{r}
+library(tidyverse)
+df <- df %>% 
+  mutate(govDecision = as.numeric(COV_15))
+```
+
+Now, the `t-test`
+
+```{r}
+t.test(govDecision ~ Gender, alt = "two.sided", conf = 0.95, var.eq = T, data = df)
+```
+
+**Q12.** Assumption checks. What is the conclusion of your assumption tests? What does this mean for hypothesis testing?
+
+Assumptions
+
+```{r}
+shapiro.test (df$govDecision)
+car::leveneTest(govDecision ~ Gender, df)
+```
+
+Mann-Whitney U test
+
+```{r}
+wilcox.test(govDecision ~ Gender, df)
+```
+
+**Q13.** In the 'Additional statistics', select 'Effect size', 'Descriptives', and 'Descriptives plots'. Report your NHST results and interpret your findings:
+
+a)  Mean or Median scores for each group on the dependent variable
+b)  The appropriate statistic (*t* or otherwise)
+c)  Significance (or otherwise) of the test
+d)  Effect size
+
+```{r}
+jmv::ttestIS(
+  formula = govDecision ~ Gender,
+  data = df,
+  vars = govDecision,
+  students = FALSE,
+  mann = TRUE,
+  norm = TRUE,
+  eqv = TRUE,
+  effectSize = TRUE,
+  desc = TRUE)
+```
+

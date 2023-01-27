@@ -1,0 +1,27 @@
+---
+title: "Intro to Week 9"
+subtitle: "PSYC344"
+author: "Dr Usman Afzali"
+institute: "University of Canterbury"
+date: today
+format: 
+  revealjs:
+    theme: simple
+    highlight-style: github
+    slide-number: c/t
+---
+
+## Kauhau {background-color="aquamarine"}
+
+::: incremental
+-   Happening This Week
+:::
+
+## Happening This Week {background-color="aquamarine"}
+
+::: incremental
+-   Lectures - Regression
+-   Lecture 26 has been divided into three parts.
+-   Lab: ANOVA
+-   Lecture Quiz
+:::

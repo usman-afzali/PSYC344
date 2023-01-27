@@ -1,0 +1,143 @@
+---
+title: "Lab 3 - Descriptive Statisitcs"
+author: "Usman Afzali"
+toc: true
+toc_float: true
+---
+
+## Preparing your dataset: Data Cleaning and Descriptives
+
+In this lab, you will learn how to clean up a dataset to prepare it for analyses.
+
+### Task 1. Initial cleaning of a dataset
+
+We will use a provided dataset for this task. Note that this file is still cleaned up to some extent. When you download a completed survey from Qualtrics, it will have many additional columns that are mostly not needed for data analysis and we will not normally use them.
+
+**Q1**. Download the `Lab 03 Dataset.xlsx` and `Lab 03 Codebook.xlsx` files from Learn. The first file is the dataset (note that some small modifications have been made to protect respondents' privacy). Responses have also been coded according to the codebook file---take a few minutes to read through the codebook so you understand this dataset.
+
+```{r}
+df <- readxl::read_xlsx("Lab 03 Dataset.xlsx")
+df
+```
+
+Have a look at the `structure`
+
+```{r}
+str(df)
+```
+
+**Q2.** Open the dataset file with R. Discuss with your peer why you should delete the first row.
+
+```{r}
+df <- df[-c(1), ]
+```
+
+**Q3.** Use your codebook to determine if R has the correct measurement type (nominal, ordinal, or continuous) and data type (integer, decimal, text) and make changes if they are not correct.
+
+To check the type of measure, we use \`str'
+
+```{r}
+str(df)
+```
+
+We can see that all continuous measures (cloums 2:27) that are supposed to be numeric, are string (character). We need to change them to numeric first.
+
+```{r}
+cols <- 2:28
+df[cols] <- lapply(df[cols], as.numeric)
+str(df)
+```
+
+**Q4.** Check your codebook to see what variables need to be reverse-coded.
+
+We see that items FIN_1\_3 and FIN_2\_7 need to be reverse coded.
+
+```{r}
+reverse_scores = c("FIN_1_3", "FIN_2_7")
+df [ , reverse_scores] = 8 - df [ , reverse_scores]
+```
+
+**Q5.** Check your codebook to see which variable needs to be computed.
+
+Codebook shows that items starting with FIN need to be averaged to give us a new variable, SFSS_A.
+
+```{r}
+df$SFSS_A <- rowMeans(df[,c("FIN_1_1", "FIN_1_2", "FIN_1_3", "FIN_1_4", "FIN_1_5", "FIN_1_6", "FIN_1_7", "FIN_1_8", "FIN_2_1", "FIN_2_2", "FIN_2_3", "FIN_2_4", "FIN_2_5", "FIN_2_6", "FIN_2_7")], na.rm = TRUE)
+```
+
+### Task 2. Initial scan of a dataset.
+
+Let's have a refresher on what means and standard deviations are.
+
+**Q1.** Select the variables 'COV_1', 'COV_2' and 'COV_3' and look at the mean scores, standard deviations, and histograms for each question.
+
+a.  Overall, what were survey respondents most worried about at the beginning of lockdown?
+b.  For which variable does the amount of worry vary the least between respondents?
+c.  What is the shape of each distribution? Are any ceiling or floor effects present?
+
+```{r}
+psych::describe(df [ ,c("COV_1", "COV_2", "COV_3")], na.rm = TRUE)
+```
+
+```{r}
+#| layout-ncol: 3
+#| fig-cap: 
+#| - "COV _ 1"
+#| - "COV _ 2"
+#| - "COV _ 3"
+library(ggplot2)
+ggplot(df, aes(COV_1)) + geom_histogram(binwidth = 1)
+ggplot(df, aes(COV_2)) + geom_histogram(binwidth = 1)
+ggplot(df, aes(COV_3)) + geom_histogram(binwidth = 1)
+```
+
+Now we will look at another variable more deeply and figure out if their distribution is normal. This is important as we go into inferential statistics, we are required to check all variables for the assumption of normality (amongst other assumption tests) before we run our analyses.
+
+**Q2.** Get a histogram and a boxplot for COV_4
+
+```{r}
+ggplot(df, aes(COV_4)) + geom_histogram(binwidth = 1)
+```
+
+```{r}
+boxplot(df$COV_4)
+```
+
+**Q3.** Calculate Mean, Standard deviation, Skewness, and Shapiro-Wilk.
+
+```{r}
+psych::describe(df$COV_4)
+shapiro.test(df$COV_4)
+```
+
+**Q4.** What do these statistics, alongside the graphs, tell us about the distribution of responses to this question?
+
+a.  Where is it centred?
+b.  Is it normal?
+c.  Is it skewed?
+
+### Task 3. Testing hypotheses.
+
+We now want to test two directionality hypotheses to have a basic understanding of how our variables relate to each other. This is a step called exploratory data analysis.
+
+Firstly, we want to know the directionality of the relationship between how well students coped during lockdown 'COV_4' and their impression of how the pandemic has impacted their academic performance 'COV_10'.
+
+**Q1.** Calculate the correlation between COV_4 and COV_10. using 'Kendall's tau-b'. **NOTE:** We use this statistic because COV_10 is technically ordinal, rather than scale. You use the same guidelines as Pearson's r to assess strength i.e. 0.1, 0.3, and 0.5 for weak, moderate, and strong, respectively.
+
+```{r}
+cor.test(df$COV_4, df$COV_10, method = c ("kendall"))
+```
+
+**Q2.** What do the correlation coefficient tell us about the relationship between how well someone thought they coped overall during lockdown (COV_4) and how they feel the pandemic affected their academic performance (COV_10). Make note of: a. The direction of the correlation. **HINT:** Refer to the codebook for how the response scales are for both variables. b. The strength of the correlation. c. Whether the correlation is statistically significant.
+
+**Q3.** Do you think having a worse experience of lockdown overall tended to result in poorer academic performance, or did poorer academic performance result in a worse experience of lockdown overall? What do the correlational data tell us about which is more likely?
+
+**Q4.** We want to know the directionality of the relationship between how well students coped during lockdown 'COV_4' and their financial stress. Calculate correlation between COV_4 and the financial stress composite variable that you created, using 'Pearson' correlation.
+
+```{r}
+cor.test(df$COV_4, df$SFSS_A, method = c ("pearson"))
+```
+
+**Q5.**. What does the correlation coefficient tell us about the relationship between how well someone thought they coped overall during lockdown (COV_4) and their financial stress?
+
+*The End*

@@ -1,0 +1,26 @@
+project:
+  type: website
+
+website:
+  title: "PSYC344"
+  navbar:
+    pinned: true
+    left:
+      - text: "Welcome"
+        file: intro.qmd
+      - text: "Labs"
+        file: labs.qmd
+      - text: "Presentations"
+        file: presentations.qmd
+    right:
+      - icon: github
+        href: https://github.com/usman-afzali
+    page-navigation: true
+
+format:
+  html:
+    theme: [litera, styles.scss]
+    css: styles.scss
+    highlight-style: tango
+
+editor: source

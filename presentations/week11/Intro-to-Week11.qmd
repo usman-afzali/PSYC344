@@ -1,0 +1,36 @@
+---
+title: "Intro to Week 11"
+subtitle: "PSYC344"
+author: "Dr Usman Afzali"
+institute: "University of Canterbury"
+date: today
+format: 
+  revealjs:
+    theme: simple
+    highlight-style: github
+    slide-number: c/t
+---
+
+# Kauhau {background-color="green"}
+
+::: incremental
+-   Happening This Week
+-   PG Options
+:::
+
+## Happening This Week {background-color="green"}
+
+::: incremental
+-   Lectures - Qualitative Methods
+-   Delivered by Dr Fleur Pawsey
+-   Lab: Regression - The final lab of the semester
+-   Lecture Quiz
+:::
+
+## PG Options {background-color="green"}
+
+::: incremental
+-   Recording from A/Prof Ewald Neumann
+-   The new course: PSYC480
+-   If you are a prospective Honours/PG student
+:::
