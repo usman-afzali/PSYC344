@@ -20,7 +20,7 @@ website:
 
 format:
   html:
-    theme: [litera, styles.scss]
+    theme: [minty, styles.scss]
     css: styles.scss
     highlight-style: tango
 
