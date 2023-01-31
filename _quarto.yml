@@ -15,7 +15,7 @@ website:
         file: presentations.qmd
     right:
       - icon: github
-        href: https://github.com/usman-afzali
+        href: https://github.com/usman-afzali/PSYC344
     page-navigation: true
 
 format:

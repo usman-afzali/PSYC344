@@ -4,6 +4,7 @@ author: "Usman Afzali"
 code-fold: false
 toc: true
 toc_float: true
+bibliography: references.bib
 ---
 
 In this lab we will have a look at a scale used in Prof Andy Field's textbook (Discovering Statistics Using IBM SPSS Statistics) to conduct EFA and CFA analyses. The purpose of the factor analysis exercise is to get a better understanding of the psychological construct (SPSS Anxiety) as measured by the SAQ (i.e., construct validity information). Knowing the construct validity of a scale allows us to make an informed decision on how the scale can be used. One of the most common usages is to create valid composite scores. We randomly divided up the original dataset of responses on the SAQ into an EFA sample and a CFA sample (Please note that Usman used the same dataset for EFA in the class too, but he used the data from all subjects). Dividing up is a common methodological strategy in scale development to obtain two independent samples. This lab is important because it provides you with an experiential learning opportunity to conduct exploratory and confirmatory factor analyses. This is an important skill that will be assessed in your Lab Report (the next assignment).

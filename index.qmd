@@ -2,6 +2,16 @@
 title: "Intermediate Research Methods and Statistics"
 subtitle: "Labs with `R` and Presentations"
 image: p_values.jpg
+author:
+  - name: Usman Afzali, PhD
+    orcid: 0000-0001-5119-9388
+    email: usman.afzali@canterbury.ac.nz
+    affiliations:
+      - name: University of Canterbury | Te Whare Wananga o Waitaha
+        address: 20 Kirkwood Ave
+        city: Chrsitchurch
+        state: Canterbury
+        postal-code: 8041
 
 about:
   template: jolla
@@ -16,8 +26,6 @@ about:
       text: Usman Afzali
       href: https://www.linkedin.com/in/usman-afzali-086147a4/
     - icon: github
-      text: usman-afzali
-      href: https://github.com/usman-afzali
+      text: PSYC344
+      href: https://github.com/usman-afzali/PSYC344
 ---
-
-By Usman Afzali, PhD
