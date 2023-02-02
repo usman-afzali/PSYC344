@@ -34,7 +34,7 @@ website:
 
 format:
   html:
-    theme: [minty, styles.scss]
+    theme: litera
     css: styles.scss
     highlight-style: espresso
     code-tools: true
