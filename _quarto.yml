@@ -3,16 +3,14 @@ project:
   output-dir: docs
 
 website:
-  title: "PSYC344"
+  title: "Intermediate Research Methods and Statistics"
   favicon: p_values.jpg
   
   page-footer:
-    center: |
-      <span class="container"><strong>[Contact Usman Afzali](mailto:usman.afzali@canterbury.ac.nz){target="_blank"}</strong></span>
     left: |
       <span class="container"><strong>Made with [Posit Quarto on RStudio](https://quarto.org/){target="_blank"}</strong></span>
     right: |
-      <span class="container"><strong>[Github Repo](https://github.com/usman-afzali/PSYC344){target="_blank"}</strong></span>
+      <span class="container"><strong>[PSYC344 Github Repository](https://github.com/usman-afzali/PSYC344){target="_blank"}</strong></span>
     background: "#559BED"
   
   search: 
@@ -21,15 +19,19 @@ website:
   navbar:
     pinned: true
     left:
-      - text: "Welcome"
+      - text: "Home"
+        file: index.qmd
+      - text: "Introduction"
         file: intro.qmd
+      - text: "How to Use?"
+        file: how-to-use.qmd
       - text: "Labs"
         file: labs.qmd
       - text: "Presentations"
         file: presentations.qmd
-    right:
-      - icon: github
-        href: https://github.com/usman-afzali/PSYC344
+      - text: "Course Outline/Topics"
+        file: outline.qmd
+
     page-navigation: true
 
 format:

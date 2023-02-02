@@ -1,6 +1,5 @@
 ---
-title: "Intermediate Research Methods and Statistics"
-subtitle: "Labs with `R` and Presentations"
+title: "Intermediate Research Methods and Statistics (PSYC344)"
 image: p_values.jpg
 author:
   - name: Usman Afzali, PhD
@@ -17,23 +16,25 @@ about:
   template: jolla
   image-shape: rectangle
   links:
-    - icon: mastodon
-      text: Mastodon
-      href: https://mathstodon.xyz/@usman_afzali
-    - icon: twitter
-      text: UsmanAfzali
-      href: https://twitter.com/UsmanAfzali
-    - icon: link
-      text: Usman Afzali
-      href: https://www.usmanafzali.com  
-    - icon: linkedin
-      text: Usman Afzali
-      href: https://www.linkedin.com/in/usman-afzali-086147a4/
     - icon: github
       text: PSYC344
       href: https://github.com/usman-afzali/PSYC344
+    - icon: book
+      text: Course Official Page
+      href: https://www.canterbury.ac.nz/courseinfo/GetCourseDetails.aspx?course=PSYC344&occurrence=23S2(C)&year=2023
     - icon: mailbox2
-      text: Email
+      text: Email Usman
       href: mailto:usman.afzali@canterbury.ac.nz
-        
+    - icon: link
+      text: Usman Afzali
+      href: https://www.usmanafzali.com  
+    - icon: twitter
+      text: UsmanAfzali
+      href: https://twitter.com/UsmanAfzali
+    - icon: linkedin
+      text: Usman Afzali
+      href: https://www.linkedin.com/in/usman-afzali-086147a4/
+    - icon: mastodon
+      text: Usman Afzali
+      href: https://mathstodon.xyz/@usman_afzali
 ---
