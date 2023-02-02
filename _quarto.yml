@@ -13,7 +13,7 @@ website:
       <span class="container"><strong>Made with [Posit Quarto on RStudio](https://quarto.org/){target="_blank"}</strong></span>
     right: |
       <span class="container"><strong>[Github Repo](https://github.com/usman-afzali/PSYC344){target="_blank"}</strong></span>
-    background: "#FFA500"
+    background: "#559BED"
   
   search: 
     location: navbar
@@ -34,7 +34,7 @@ website:
 
 format:
   html:
-    theme: litera
+    theme: materia
     css: styles.scss
     highlight-style: espresso
     code-tools: true
