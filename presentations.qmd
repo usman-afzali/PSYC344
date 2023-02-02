@@ -3,7 +3,7 @@ title: "Presentataions"
 listing:
   id: recap-listings2
   contents: presentations
-  sort: "title desc"
+  sort: "descending"
   type: default
   categories: false
   sort-ui: false

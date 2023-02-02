@@ -1,7 +1,6 @@
 ---
 title: "Lab 4: Exploratory and Confirmatory Factor Analyses"
 author: "Usman Afzali"
-code-fold: false
 toc: true
 toc_float: true
 bibliography: references.bib

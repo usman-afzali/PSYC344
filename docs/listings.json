@@ -7,8 +7,8 @@
     "listing": "/labs.html",
     "items": [
       "/labs/rstudio-and-quarto/index.html",
-      "/labs/what-is-quarto/index.html",
-      "/labs/why-quarto/index.html"
+      "/labs/why-quarto/index.html",
+      "/labs/what-is-quarto/index.html"
     ]
   },
   {
@@ -16,9 +16,9 @@
     "items": [
       "/presentations/week09/Intro-to-Week9.html",
       "/presentations/week12/Intro-to-Week12.html",
-      "/presentations/week11/Intro-to-Week11.html",
+      "/presentations/Exam prep/exam-prep.html",
       "/presentations/week10/Intro-to-Week10.html",
-      "/presentations/Exam prep/exam-prep.html"
+      "/presentations/week11/Intro-to-Week11.html"
     ]
   }
 ]

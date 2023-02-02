@@ -4,6 +4,20 @@ project:
 
 website:
   title: "PSYC344"
+  favicon: p_values.jpg
+  
+  page-footer:
+    center: |
+      <span class="container"><strong>[Contact Usman Afzali](mailto:usman.afzali@canterbury.ac.nz){target="_blank"}</strong></span>
+    left: |
+      <span class="container"><strong>Made with [Posit Quarto on RStudio](https://quarto.org/){target="_blank"}</strong></span>
+    right: |
+      <span class="container"><strong>[Github Repo](https://github.com/usman-afzali/PSYC344){target="_blank"}</strong></span>
+    background: "#FFA500"
+  
+  search: 
+    location: navbar
+    type: textbox
   navbar:
     pinned: true
     left:
@@ -22,6 +36,9 @@ format:
   html:
     theme: [minty, styles.scss]
     css: styles.scss
-    highlight-style: tango
+    highlight-style: espresso
+    code-tools: true
+    code-block-bg: true
+    citations-hover: true
 
 editor: source

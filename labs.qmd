@@ -3,7 +3,7 @@ title: "Labs"
 listing:
   id: labs-listings
   contents: labs
-  sort: "title desc"
+  sort: "descending"
   type: default
   categories: false
   sort-ui: false
