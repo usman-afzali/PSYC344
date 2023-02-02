@@ -37,7 +37,7 @@ format:
     theme: materia
     css: styles.scss
     highlight-style: espresso
-    code-tools: true
+    code-tools: false
     code-block-bg: true
     citations-hover: true
 
