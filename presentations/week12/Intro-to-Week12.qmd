@@ -15,22 +15,23 @@ format:
 
 ::: incremental
 -   Happening This Week
--   PG Options
+-   Course wrap up
 :::
 
 ## Happening This Week {background-color="green"}
 
 ::: incremental
--   Lectures - Qualitative Methods
--   Delivered by Dr Fleur Pawsey
--   Lab: Regression - The final lab of the semester
+-   Lecture - Science communication
+-   Lecture - Panel discussion
+-   Lecture - Kahoot review
+-   Learning activity: Pulse survey
 -   Lecture Quiz
 :::
 
-## PG Options {background-color="green"}
+## Course wrap up {background-color="green"}
 
 ::: incremental
--   Recording from A/Prof Ewald Neumann
--   The new course: PSYC480
--   If you are a prospective Honours/PG student
+-   The motive behind lectures
+-   It might be difficult for you to assess how much we learned unless we use strength-based approach - 206, 344, 460
+-   How does PG work?
 :::
