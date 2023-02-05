@@ -8,7 +8,7 @@ website:
   
   page-footer:
     left: |
-      <span class="container"><strong>Made with [Posit Quarto on RStudio](https://quarto.org/){target="_blank"}</strong></span>
+      <span class="container"><strong>Made with [Posit Quarto on RStudio](https://quarto.org/docs/get-started/hello/rstudio.html){target="_blank"}</strong></span>
     right: |
       <span class="container"><strong>[PSYC344 Github Repository](https://github.com/usman-afzali/PSYC344){target="_blank"}</strong></span>
     background: "#559BED"
