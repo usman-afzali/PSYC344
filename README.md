@@ -12,11 +12,10 @@ In addition to  `statistics labs`, some weekly `introduction slides` and the `Co
 
 For the next course occurrence (July, 2023), weekly lecture slides will be made available too.
 
-::: {.callout-note}
 
-## Website
+### Website
 Please access the [PSYC344 Website](https://usman-afzali.github.io/PSYC344/) to access and live-use notes and executable code.
-:::
+
 
 ## Labs
 
@@ -26,10 +25,10 @@ First, let's learn how to use the available code for `lab files`.
 
 Each of the lab files is a `Quarto Markdwon` or `.qmd` document. 
 
-::: callout-note
-## Website
+
+### Website
 If you have background in coding and are just looking for a piece of code, or if you want to browse the code, you can access the [Labs](https://usman-afzali.github.io/PSYC344/labs.html) section and click on the relevant lab. The `R` code in this website is executable. Relevant code can be copied and ran on `R scrip`, `R markdown` or `Quarto markdown`. 
-:::
+
 
 Each of the lab files in this repo is a `Quarto Markdwon` or `.qmd` document.
 If you want to access the very `.qmd` documents to use and replicate the code, you should:
@@ -65,10 +64,9 @@ Use `Lab4-EFA-and-CFA.qmd`.
 
 Use `Lab5-t-test.qmd`.
 
-::: callout-note
-## More to come
+
+### More to come
 Further lab files are yet to be added.
-:::
 
 ## Slides
 
@@ -102,12 +100,10 @@ Use `Intro-to-Week12.qmd`.
 
 Use `exam-guidelines.qmd`.
 
-::: callout-tip
 ## Note
 -   Feel free to use/replicate the code.
 
 -   Suggestions welcome.
-:::
 
 Kind regards.
 
