@@ -23,13 +23,13 @@ This website contains `R` code for `statistics labs` of the Year 3 [Intermediate
 
 In addition to  `statistics labs`, some weekly `introduction slides` and the `Course Outline` are available too.
 
-For the next occurrence, weekly lecture slides will be made available too.
+For the next course occurrence (July, 2023), weekly lecture slides will be made available too.
 
 ::: {.callout-note}
 
 ## GitHub Repo
 
-Please access the [PSYC344 Github Repository](https://github.com/usman-afzali/PSYC344) to use or replicate the code for this website. You can also access the `quaro` or `.qmd` files from the repository.
+Please access the [PSYC344 Github Repository](https://github.com/usman-afzali/PSYC344) to use or replicate the code for this website. You can also access the `quarto` or `.qmd` files from the repository.
 
 :::
 
