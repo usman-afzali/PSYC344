@@ -1,0 +1,185 @@
+---
+title: "Lab 4: Exploratory and Confirmatory Factor Analyses"
+author: "Usman Afzali"
+date: 2023 01 27
+toc: true
+toc_float: true
+---
+
+In this lab we will have a look at a scale used in Prof Andy Field's textbook (Discovering Statistics Using IBM SPSS Statistics) to conduct EFA and CFA analyses. The purpose of the factor analysis exercise is to get a better understanding of the psychological construct (SPSS Anxiety) as measured by the SAQ (i.e., construct validity information). Knowing the construct validity of a scale allows us to make an informed decision on how the scale can be used. One of the most common usages is to create valid composite scores. We randomly divided up the original dataset of responses on the SAQ into an EFA sample and a CFA sample (Please note that Usman used the same dataset for EFA in the class too, but he used the data from all subjects). Dividing up is a common methodological strategy in scale development to obtain two independent samples. This lab is important because it provides you with an experiential learning opportunity to conduct exploratory and confirmatory factor analyses. This is an important skill that will be assessed in your Lab Report (the next assignment).
+
+## Task 1: Exploratory Factor Analysis -- Deciding on a factor structure
+
+**Q1.** Import the dataset into R. Go through to ensure that the data variable information is correct for all the variables (i.e., measure type, data type, missing values).
+
+```{r}
+library(readxl)
+df <- read_xlsx("Lab 4 Dataset.xlsx")
+df
+```
+
+Let's have a look at the `structure`.
+
+```{r}
+str(df)
+```
+
+**Q2.** As a practice, let's rename the nominal (factor analysis sample) variable levels to corresponding names where EFA replaces 1 and CFA replaces 2.
+
+```{r}
+col <- 1
+df[col] <- lapply(df[col], as.character)
+str(df)
+```
+
+**Q3.** Here is a neat trick; R (and other data analysis software) use the filter function that enables you to work with a subset of a large dataset. This is handy for keeping analyses tidy. For this exercise, we are going to use a filter to separate out our EFA and CFA samples. We designate 1 to the EFA subsample and 2 to the CFA sample.
+
+Renaming EFA and CFA samples:
+
+```{r}
+df$FAS = ifelse(df$factor_analysis_sample < 2, "EFA", "CFA")
+str(df)
+```
+
+Selecting EFA sample only, so it can be used for further analysis.
+
+```{r}
+EFA <- dplyr::filter(df, FAS %in% c("EFA"))
+str(EFA)
+```
+
+First, let's select only numeric columns - pertaining to questionnaire items.
+
+```{r}
+library(dplyr)
+EFA_items <- EFA %>%
+  select(Question_1, Question_2, Question_3, Question_4, Question_5, Question_6, Question_7, Question_8, Question_9, Question_10, Question_11, Question_12, Question_13, Question_14, Question_15, Question_16, Question_17, Question_18, Question_19, Question_20, Question_21, Question_22, Question_23)
+str(EFA_items)
+```
+
+**Q4.** Set extraction method to 'Principal axis' (allowing for measurement error with the new scale being developed) and rotation method to 'Promax' (allowing for factors to correlate because most psychological constructs do correlate to some extent). Number of factors should be based on eigenvalues (Eigenvalues greater than 1). Hide loadings below 0.4; and show Factor summary.
+
+**Q5.** Check both the options under 'assumption checks' (Bartlett's test of sphericity and KMO measure of sampling adequacy). Do our data satisfy both assumptions for EFA?
+
+**Q6.** With the criteria of eigenvalues greater than 1, how many factors were extracted?
+
+**Q7.** Since a 1-factor model implies that SAQ is a 23-item scale, to explore how to make the scale more parsimonious we shall rerun the factor analysis with a more liberal eigenvalue. Let's try eigenvalues greater than 0, how many factors were extracted now?
+
+Correlate all items and round it up two dp.
+
+```{r}
+EFAMatrix <- cor(EFA_items)
+cored<-round (EFAMatrix, 2)
+corrplot::corrplot(cored)
+```
+
+Checking EFA assumptions
+
+```{r}
+psych::cortest.bartlett(EFAMatrix, n = 1285)
+psych::KMO(EFA_items)
+det(cor(EFAMatrix))
+```
+
+Extracting EFA factors.
+
+`length(EFA_items)` tells us the number of items
+
+```{r}
+len<-length(EFA_items)
+len
+```
+
+We are running `principal axis factoring`, with arbitrary number of 10 factors and no rotation.
+
+```{r}
+pcModelnr<-psych::fa(EFA_items, nfactors = 10, fm = 'pa', rotate = "none")
+pcModelnr
+```
+
+We change rotation to `oblimin`.
+
+```{r}
+pcModelnrob<-psych::fa(EFA_items, nfactors = 10, fm = 'pa', rotate = "oblimin")
+pcModelnrob
+```
+
+**Q8.** Since a X-factor model is not parsimonious either, let's look at the scree plot. According to the scree plot, after what number of factors does it seems like minimal additional variance is explained?
+
+```{r}
+plot (pcModelnrob$values, type = "b")
+```
+
+**Q9.** Fix the EFA to that number and look to see if the factor loadings of the items make intuitive sense by looking at which scale items are included in each factor loading. You will need to refer to the scale items for reflection (see The SPSS Anxiety Questionnaire (SAQ) png file on Learn). Reduce the number of factors by 1 and explore that factor structure the same way, and repeat by reducing that number of factors by 1 again. Take your time with this and use another sheet within your codebook to help you understand various factor structures. You can also talk to a friend from class/your teammate and get their opinions on this (a common practice amongst psychology researchers while doing a factor analysis). After exploring a couple of options, which factor model seems to make the most sense?
+
+Scree plot shows up to 4 factors, so we restrict the number of factors to four.
+
+```{r}
+pcModel4f<-psych::fa(EFA_items, nfactors = 4, fm = 'pa', rotate = "oblimin")
+pcModel4f
+```
+
+**Q10.** How much total variance is accounted for by this final factor solution (e.g., total cumulative%)? What is the amount of variance accounted for by each factor?
+
+**Q12.** Make a note with yourself on the final items and which factor they belong to.
+
+**Q13.** Name each of the factors. What is your conclusion from the EFA?
+
+```{r}
+psych::fa.diagram(pcModel4f)
+```
+
+## Task 2: Confirmatory Factor Analysis
+
+**Q1.** Change your filter to select the CFA subsample. For this task, we want to examine whether the decision on how items should load on the SAQ based on EFA can be replicated on an independent sample. We are going to refer to the criteria for model fit mentioned in the CFA lecture.
+
+```{r}
+CFA <- dplyr::filter(df, FAS%in% c("CFA"))
+str(CFA)
+```
+
+Selecting numeric items only.
+
+```{r}
+library(dplyr)
+CFA_items <- CFA %>% select(Question_1, Question_2, Question_3, Question_4, Question_5, Question_6, Question_7, Question_8, Question_9, Question_10, Question_11, Question_12, Question_13, Question_14, Question_15, Question_16, Question_17, Question_18, Question_19, Question_20, Question_21, Question_22, Question_23)
+str(CFA_items)
+```
+
+Correlating items.
+
+```{r}
+CFAMatrix <- cor(CFA_items)
+cored2 <- round (CFAMatrix, 2)
+corrplot::corrplot(cored2)
+```
+
+**Q2 - 6**. Conducting CFA based on the factor structures above. Also, get the path diagram, and model fit measures. 3. Click on 'Factor 1' and change it to the name that you decided for Factor 1 in the previous exercise. Drag the relevant items to the space below. 4. 'Add New Factor' and change the name to your decided name for Factor 2 in the previous exercise. Add the relevant items. 5. Do the same for the rest of the factors. 6. Under Additional output, tick Path diagram. Path diagram shows you a figure scheme of all observed and latent variables where observed variables load on their corresponding factors and the factors are correlated with each other.
+
+```{r}
+model <- "
+Factor_1 =~ Question_1 + Question_21 + Question_4 + Question_16 + Question_12 + Question_20 + Question_5 + Question_3
+Factor_2 =~ Question_6 + Question_18 + Question_13 + Question_7 + Question_14 + Question_10
+Factor_3 =~ Question_8 + Question_11 + Question_17
+Factor_4 =~ Question_9 + Question_2 + Question_22"
+```
+
+```{r}
+fit <- lavaan::cfa(model, data=CFA_items)
+lavaan::parameterEstimates(fit)
+```
+
+**Q7.** Report Model Fit statistics for the four factor model. Do our findings meet the factor loading criteria?
+
+**Q8.** Compare the fit statistics of the four-factor model of the scale to a one-factor model (assuming no underlying factor solution for SAQ).
+
+```{r}
+model2 <- "
+Factor_1 =~ Question_1 + Question_21 + Question_4 + Question_16 + Question_12 + Question_20 + Question_5 + Question_3 + Question_6 + Question_18 + Question_13 + Question_7 + Question_14 + Question_10 + Question_8 + Question_11 + Question_17 + Question_9 + Question_2 + Question_22"
+fit2 <- lavaan::cfa(model2, data=CFA_items)
+lavaan::parameterEstimates(fit2)
+```
+
+**Q9.** Report Model Fit statistics for the one-factor model. Do our findings meet the factor loading criteria?
+
+**Q10.** Comparing the 4-factor and the one-factor model, which one is a better fit? What is your conclusion from the CFA?

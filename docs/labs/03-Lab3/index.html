@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.313">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Usman Afzali">
+
+<title>Intermediate Research Methods and Statistics - Lab 3: Descriptive Statisitcs</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../p_values.jpg" rel="icon" type="image/jpeg">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.scss">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Intermediate Research Methods and Statistics</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../intro.html">
+ <span class="menu-text">Introduction</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../how-to-use.html">
+ <span class="menu-text">How to Use?</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../labs.html">
+ <span class="menu-text">Labs</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../presentations.html">
+ <span class="menu-text">Presentations</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../outline.qmd">
+ <span class="menu-text">Course Outline/Topics</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/usman-afzali/psyc344"><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#preparing-your-dataset-data-cleaning-and-descriptives" id="toc-preparing-your-dataset-data-cleaning-and-descriptives" class="nav-link active" data-scroll-target="#preparing-your-dataset-data-cleaning-and-descriptives">Preparing your dataset: Data Cleaning and Descriptives</a>
+  <ul class="collapse">
+  <li><a href="#task-1.-initial-cleaning-of-a-dataset" id="toc-task-1.-initial-cleaning-of-a-dataset" class="nav-link" data-scroll-target="#task-1.-initial-cleaning-of-a-dataset">Task 1. Initial cleaning of a dataset</a></li>
+  <li><a href="#task-2.-initial-scan-of-a-dataset." id="toc-task-2.-initial-scan-of-a-dataset." class="nav-link" data-scroll-target="#task-2.-initial-scan-of-a-dataset.">Task 2. Initial scan of a dataset.</a></li>
+  <li><a href="#task-3.-testing-hypotheses." id="toc-task-3.-testing-hypotheses." class="nav-link" data-scroll-target="#task-3.-testing-hypotheses.">Task 3. Testing hypotheses.</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Lab 3: Descriptive Statisitcs</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Usman Afzali </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="preparing-your-dataset-data-cleaning-and-descriptives" class="level2">
+<h2 class="anchored" data-anchor-id="preparing-your-dataset-data-cleaning-and-descriptives">Preparing your dataset: Data Cleaning and Descriptives</h2>
+<p>In this lab, you will learn how to clean up a dataset to prepare it for analyses.</p>
+<section id="task-1.-initial-cleaning-of-a-dataset" class="level3">
+<h3 class="anchored" data-anchor-id="task-1.-initial-cleaning-of-a-dataset">Task 1. Initial cleaning of a dataset</h3>
+<p>We will use a provided dataset for this task. Note that this file is still cleaned up to some extent. When you download a completed survey from Qualtrics, it will have many additional columns that are mostly not needed for data analysis and we will not normally use them.</p>
+<p><strong>Q1</strong>. Download the <code>Lab 03 Dataset.xlsx</code> and <code>Lab 03 Codebook.xlsx</code> files from Learn. The first file is the dataset (note that some small modifications have been made to protect respondents’ privacy). Responses have also been coded according to the codebook file—take a few minutes to read through the codebook so you understand this dataset.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> readxl<span class="sc">::</span><span class="fu">read_xlsx</span>(<span class="st">"Lab 03 Dataset.xlsx"</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 140 × 30
+   RESP_ID     COV_1 COV_2 COV_3 COV_4 COV_9a COV_9b COV_9c COV_9d COV_9e COV_10
+   &lt;chr&gt;       &lt;chr&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt;  &lt;chr&gt;  &lt;chr&gt;  &lt;chr&gt;  &lt;chr&gt;  &lt;chr&gt; 
+ 1 Response ID Just… Just… Just… On a… Ease … Ease … Ease … Ease … Ease … How d…
+ 2 1           2     2     2     8.30… 3      &lt;NA&gt;   4      &lt;NA&gt;   &lt;NA&gt;   4     
+ 3 2           3     2     3     9.19… 3      &lt;NA&gt;   3      &lt;NA&gt;   &lt;NA&gt;   3     
+ 4 3           2     2     2     5.7   5      5      4      4      &lt;NA&gt;   4     
+ 5 4           1     1     2     7     2      1      4      3      &lt;NA&gt;   3     
+ 6 5           1     1     2     5     3      &lt;NA&gt;   2      4      &lt;NA&gt;   5     
+ 7 6           3     4     2     6.1   &lt;NA&gt;   &lt;NA&gt;   4      5      &lt;NA&gt;   2     
+ 8 7           1     1     3     7.1   &lt;NA&gt;   &lt;NA&gt;   &lt;NA&gt;   &lt;NA&gt;   &lt;NA&gt;   4     
+ 9 8           1     2     3     10    &lt;NA&gt;   &lt;NA&gt;   &lt;NA&gt;   &lt;NA&gt;   &lt;NA&gt;   3     
+10 9           4     4     4     8.30… 3      3      &lt;NA&gt;   &lt;NA&gt;   &lt;NA&gt;   4     
+# … with 130 more rows, and 19 more variables: FIN_1_1 &lt;chr&gt;, FIN_1_2 &lt;chr&gt;,
+#   FIN_1_3 &lt;chr&gt;, FIN_1_4 &lt;chr&gt;, FIN_1_5 &lt;chr&gt;, FIN_1_6 &lt;chr&gt;, FIN_1_7 &lt;chr&gt;,
+#   FIN_1_8 &lt;chr&gt;, FIN_2_1 &lt;chr&gt;, FIN_2_2 &lt;chr&gt;, FIN_2_3 &lt;chr&gt;, FIN_2_4 &lt;chr&gt;,
+#   FIN_2_5 &lt;chr&gt;, FIN_2_6 &lt;chr&gt;, FIN_2_7 &lt;chr&gt;, FIN_2_8 &lt;chr&gt;, FIN_2_9 &lt;chr&gt;,
+#   Age_coded &lt;chr&gt;, Gender &lt;chr&gt;</code></pre>
+</div>
+</div>
+<p>Have a look at the <code>structure</code></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>tibble [140 × 30] (S3: tbl_df/tbl/data.frame)
+ $ RESP_ID  : chr [1:140] "Response ID" "1" "2" "3" ...
+ $ COV_1    : chr [1:140] "Just prior to lockdown, how worried were you about your likelihood of contracting COVID-19?" "2" "3" "2" ...
+ $ COV_2    : chr [1:140] "Just prior to lockdown, how worried were you about suffering serious medical complications if you contracted COVID-19?" "2" "2" "2" ...
+ $ COV_3    : chr [1:140] "Just prior to lockdown, how worried were you about passing COVID-19 on to someone else if you contracted it?" "2" "3" "2" ...
+ $ COV_4    : chr [1:140] "On a scale of 1-10, how well would you say you coped overall during lockdown?" "8.3000000000000007" "9.1999999999999993" "5.7" ...
+ $ COV_9a   : chr [1:140] "Ease of access: Academic support" "3" "3" "5" ...
+ $ COV_9b   : chr [1:140] "Ease of access: Financial help" NA NA "5" ...
+ $ COV_9c   : chr [1:140] "Ease of access: Health services" "4" "3" "4" ...
+ $ COV_9d   : chr [1:140] "Ease of access: Mental health services" NA NA "4" ...
+ $ COV_9e   : chr [1:140] "Ease of access: Other" NA NA NA ...
+ $ COV_10   : chr [1:140] "How do you feel the pandemic impacted your academic performance in Semester 1?" "4" "3" "4" ...
+ $ FIN_1_1  : chr [1:140] "I constantly worry about my financial situation" "3" "3" "5" ...
+ $ FIN_1_2  : chr [1:140] "I try not to think about how much debt I am in" "4" "6" "2" ...
+ $ FIN_1_3  : chr [1:140] "My income is sufficient to meet my needs" "5" "6" "3" ...
+ $ FIN_1_4  : chr [1:140] "I think my financial position has a negative effect on my social life" "4" "5" "5" ...
+ $ FIN_1_5  : chr [1:140] "I think my financial position has a negative effect on my study" "3" "2" "6" ...
+ $ FIN_1_6  : chr [1:140] "Not meeting my weekly financial demands is constantly on my mind" "4" "3" "5" ...
+ $ FIN_1_7  : chr [1:140] "Worrying about money affects my daily mood" "4" "5" "5" ...
+ $ FIN_1_8  : chr [1:140] "I feel like I don‚Äôt have enough money to do the things I enjoy" "4" "5" "5" ...
+ $ FIN_2_1  : chr [1:140] "I find myself stressing about upcoming payments" "5" "2" "5" ...
+ $ FIN_2_2  : chr [1:140] "I feel stressed when I receive my bills" "4" "6" "5" ...
+ $ FIN_2_3  : chr [1:140] "I am often concerned I will not have enough funds to make necessary purchases" "5" "2" "4" ...
+ $ FIN_2_4  : chr [1:140] "I spend all my money on living costs" "4" "1" "3" ...
+ $ FIN_2_5  : chr [1:140] "I regularly miss out on social occasions due to finances" "5" "4" "3" ...
+ $ FIN_2_6  : chr [1:140] "I compromise my well-being due to my financial situation" "4" "4" "4" ...
+ $ FIN_2_7  : chr [1:140] "I am able to easily balance my finances with my social life" "5" "3" "4" ...
+ $ FIN_2_8  : chr [1:140] "Financial stress restricts my social life" "4" "5" "5" ...
+ $ FIN_2_9  : chr [1:140] "I avoid interactions that involve money" "4" "6" "5" ...
+ $ Age_coded: chr [1:140] "Age" "19-24" "19-24" "19-24" ...
+ $ Gender   : chr [1:140] "What gender do you identify with?" "Male" "Female" "Female" ...</code></pre>
+</div>
+</div>
+<p><strong>Q2.</strong> Open the dataset file with R. Discuss with your peer why you should delete the first row.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> df[<span class="sc">-</span><span class="fu">c</span>(<span class="dv">1</span>), ]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><strong>Q3.</strong> Use your codebook to determine if R has the correct measurement type (nominal, ordinal, or continuous) and data type (integer, decimal, text) and make changes if they are not correct.</p>
+<p>To check the type of measure, we use `str’</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>tibble [139 × 30] (S3: tbl_df/tbl/data.frame)
+ $ RESP_ID  : chr [1:139] "1" "2" "3" "4" ...
+ $ COV_1    : chr [1:139] "2" "3" "2" "1" ...
+ $ COV_2    : chr [1:139] "2" "2" "2" "1" ...
+ $ COV_3    : chr [1:139] "2" "3" "2" "2" ...
+ $ COV_4    : chr [1:139] "8.3000000000000007" "9.1999999999999993" "5.7" "7" ...
+ $ COV_9a   : chr [1:139] "3" "3" "5" "2" ...
+ $ COV_9b   : chr [1:139] NA NA "5" "1" ...
+ $ COV_9c   : chr [1:139] "4" "3" "4" "4" ...
+ $ COV_9d   : chr [1:139] NA NA "4" "3" ...
+ $ COV_9e   : chr [1:139] NA NA NA NA ...
+ $ COV_10   : chr [1:139] "4" "3" "4" "3" ...
+ $ FIN_1_1  : chr [1:139] "3" "3" "5" "5" ...
+ $ FIN_1_2  : chr [1:139] "4" "6" "2" "6" ...
+ $ FIN_1_3  : chr [1:139] "5" "6" "3" "7" ...
+ $ FIN_1_4  : chr [1:139] "4" "5" "5" "1" ...
+ $ FIN_1_5  : chr [1:139] "3" "2" "6" "5" ...
+ $ FIN_1_6  : chr [1:139] "4" "3" "5" "5" ...
+ $ FIN_1_7  : chr [1:139] "4" "5" "5" "1" ...
+ $ FIN_1_8  : chr [1:139] "4" "5" "5" "1" ...
+ $ FIN_2_1  : chr [1:139] "5" "2" "5" "3" ...
+ $ FIN_2_2  : chr [1:139] "4" "6" "5" "2" ...
+ $ FIN_2_3  : chr [1:139] "5" "2" "4" "4" ...
+ $ FIN_2_4  : chr [1:139] "4" "1" "3" "1" ...
+ $ FIN_2_5  : chr [1:139] "5" "4" "3" "1" ...
+ $ FIN_2_6  : chr [1:139] "4" "4" "4" "1" ...
+ $ FIN_2_7  : chr [1:139] "5" "3" "4" "6" ...
+ $ FIN_2_8  : chr [1:139] "4" "5" "5" "1" ...
+ $ FIN_2_9  : chr [1:139] "4" "6" "5" "1" ...
+ $ Age_coded: chr [1:139] "19-24" "19-24" "19-24" "19-24" ...
+ $ Gender   : chr [1:139] "Male" "Female" "Female" "Female" ...</code></pre>
+</div>
+</div>
+<p>We can see that all continuous measures (cloums 2:27) that are supposed to be numeric, are string (character). We need to change them to numeric first.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>cols <span class="ot">&lt;-</span> <span class="dv">2</span><span class="sc">:</span><span class="dv">28</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>df[cols] <span class="ot">&lt;-</span> <span class="fu">lapply</span>(df[cols], as.numeric)</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>tibble [139 × 30] (S3: tbl_df/tbl/data.frame)
+ $ RESP_ID  : chr [1:139] "1" "2" "3" "4" ...
+ $ COV_1    : num [1:139] 2 3 2 1 1 3 1 1 4 4 ...
+ $ COV_2    : num [1:139] 2 2 2 1 1 4 1 2 4 4 ...
+ $ COV_3    : num [1:139] 2 3 2 2 2 2 3 3 4 5 ...
+ $ COV_4    : num [1:139] 8.3 9.2 5.7 7 5 6.1 7.1 10 8.3 8.1 ...
+ $ COV_9a   : num [1:139] 3 3 5 2 3 NA NA NA 3 2 ...
+ $ COV_9b   : num [1:139] NA NA 5 1 NA NA NA NA 3 2 ...
+ $ COV_9c   : num [1:139] 4 3 4 4 2 4 NA NA NA NA ...
+ $ COV_9d   : num [1:139] NA NA 4 3 4 5 NA NA NA NA ...
+ $ COV_9e   : num [1:139] NA NA NA NA NA NA NA NA NA NA ...
+ $ COV_10   : num [1:139] 4 3 4 3 5 2 4 3 4 2 ...
+ $ FIN_1_1  : num [1:139] 3 3 5 5 1 5 3 1 7 3 ...
+ $ FIN_1_2  : num [1:139] 4 6 2 6 1 5 6 6 6 5 ...
+ $ FIN_1_3  : num [1:139] 5 6 3 7 6 4 2 7 1 5 ...
+ $ FIN_1_4  : num [1:139] 4 5 5 1 1 6 3 1 6 1 ...
+ $ FIN_1_5  : num [1:139] 3 2 6 5 1 5 2 1 6 1 ...
+ $ FIN_1_6  : num [1:139] 4 3 5 5 1 4 5 1 6 2 ...
+ $ FIN_1_7  : num [1:139] 4 5 5 1 1 4 2 1 6 2 ...
+ $ FIN_1_8  : num [1:139] 4 5 5 1 2 7 3 1 6 2 ...
+ $ FIN_2_1  : num [1:139] 5 2 5 3 1 4 6 2 6 2 ...
+ $ FIN_2_2  : num [1:139] 4 6 5 2 1 4 6 1 6 2 ...
+ $ FIN_2_3  : num [1:139] 5 2 4 4 2 4 6 1 6 3 ...
+ $ FIN_2_4  : num [1:139] 4 1 3 1 1 4 5 1 6 4 ...
+ $ FIN_2_5  : num [1:139] 5 4 3 1 1 5 4 1 6 2 ...
+ $ FIN_2_6  : num [1:139] 4 4 4 1 1 6 2 1 7 5 ...
+ $ FIN_2_7  : num [1:139] 5 3 4 6 6 2 3 7 2 6 ...
+ $ FIN_2_8  : num [1:139] 4 5 5 1 1 6 5 1 6 1 ...
+ $ FIN_2_9  : num [1:139] 4 6 5 1 1 5 6 5 6 3 ...
+ $ Age_coded: chr [1:139] "19-24" "19-24" "19-24" "19-24" ...
+ $ Gender   : chr [1:139] "Male" "Female" "Female" "Female" ...</code></pre>
+</div>
+</div>
+<p><strong>Q4.</strong> Check your codebook to see what variables need to be reverse-coded.</p>
+<p>We see that items FIN_1_3 and FIN_2_7 need to be reverse coded.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>reverse_scores <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"FIN_1_3"</span>, <span class="st">"FIN_2_7"</span>)</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>df [ , reverse_scores] <span class="ot">=</span> <span class="dv">8</span> <span class="sc">-</span> df [ , reverse_scores]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><strong>Q5.</strong> Check your codebook to see which variable needs to be computed.</p>
+<p>Codebook shows that items starting with FIN need to be averaged to give us a new variable, SFSS_A.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>df<span class="sc">$</span>SFSS_A <span class="ot">&lt;-</span> <span class="fu">rowMeans</span>(df[,<span class="fu">c</span>(<span class="st">"FIN_1_1"</span>, <span class="st">"FIN_1_2"</span>, <span class="st">"FIN_1_3"</span>, <span class="st">"FIN_1_4"</span>, <span class="st">"FIN_1_5"</span>, <span class="st">"FIN_1_6"</span>, <span class="st">"FIN_1_7"</span>, <span class="st">"FIN_1_8"</span>, <span class="st">"FIN_2_1"</span>, <span class="st">"FIN_2_2"</span>, <span class="st">"FIN_2_3"</span>, <span class="st">"FIN_2_4"</span>, <span class="st">"FIN_2_5"</span>, <span class="st">"FIN_2_6"</span>, <span class="st">"FIN_2_7"</span>)], <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="task-2.-initial-scan-of-a-dataset." class="level3">
+<h3 class="anchored" data-anchor-id="task-2.-initial-scan-of-a-dataset.">Task 2. Initial scan of a dataset.</h3>
+<p>Let’s have a refresher on what means and standard deviations are.</p>
+<p><strong>Q1.</strong> Select the variables ‘COV_1’, ‘COV_2’ and ‘COV_3’ and look at the mean scores, standard deviations, and histograms for each question.</p>
+<ol type="a">
+<li>Overall, what were survey respondents most worried about at the beginning of lockdown?</li>
+<li>For which variable does the amount of worry vary the least between respondents?</li>
+<li>What is the shape of each distribution? Are any ceiling or floor effects present?</li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>psych<span class="sc">::</span><span class="fu">describe</span>(df [ ,<span class="fu">c</span>(<span class="st">"COV_1"</span>, <span class="st">"COV_2"</span>, <span class="st">"COV_3"</span>)], <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>      vars   n mean   sd median trimmed  mad min max range  skew kurtosis   se
+COV_1    1 139 2.63 1.02      3    2.63 1.48   1   5     4 -0.02    -0.72 0.09
+COV_2    2 139 2.36 1.17      2    2.28 1.48   1   5     4  0.46    -0.88 0.10
+COV_3    3 139 3.57 1.17      4    3.65 1.48   1   5     4 -0.45    -0.74 0.10</code></pre>
+</div>
+</div>
+<div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(df, <span class="fu">aes</span>(COV_1)) <span class="sc">+</span> <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">1</span>)</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(df, <span class="fu">aes</span>(COV_2)) <span class="sc">+</span> <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">1</span>)</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(df, <span class="fu">aes</span>(COV_3)) <span class="sc">+</span> <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="cell-output-display quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="index_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid figure-img" width="672"></p>
+<p></p><figcaption class="figure-caption">COV _ 1</figcaption><p></p>
+</figure>
+</div>
+</div>
+<div class="cell-output-display quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="index_files/figure-html/unnamed-chunk-9-2.png" class="img-fluid figure-img" width="672"></p>
+<p></p><figcaption class="figure-caption">COV _ 2</figcaption><p></p>
+</figure>
+</div>
+</div>
+<div class="cell-output-display quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="index_files/figure-html/unnamed-chunk-9-3.png" class="img-fluid figure-img" width="672"></p>
+<p></p><figcaption class="figure-caption">COV _ 3</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>Now we will look at another variable more deeply and figure out if their distribution is normal. This is important as we go into inferential statistics, we are required to check all variables for the assumption of normality (amongst other assumption tests) before we run our analyses.</p>
+<p><strong>Q2.</strong> Get a histogram and a boxplot for COV_4</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(df, <span class="fu">aes</span>(COV_4)) <span class="sc">+</span> <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 2 rows containing non-finite values (`stat_bin()`).</code></pre>
+</div>
+<div class="cell-output-display">
+<p><img src="index_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(df<span class="sc">$</span>COV_4)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="index_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p><strong>Q3.</strong> Calculate Mean, Standard deviation, Skewness, and Shapiro-Wilk.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>psych<span class="sc">::</span><span class="fu">describe</span>(df<span class="sc">$</span>COV_4)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   vars   n mean   sd median trimmed  mad min max range  skew kurtosis   se
+X1    1 137 6.58 2.19    7.1    6.68 2.22 1.8  10   8.2 -0.41    -0.84 0.19</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">shapiro.test</span>(df<span class="sc">$</span>COV_4)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Shapiro-Wilk normality test
+
+data:  df$COV_4
+W = 0.94971, p-value = 6.908e-05</code></pre>
+</div>
+</div>
+<p><strong>Q4.</strong> What do these statistics, alongside the graphs, tell us about the distribution of responses to this question?</p>
+<ol type="a">
+<li>Where is it centred?</li>
+<li>Is it normal?</li>
+<li>Is it skewed?</li>
+</ol>
+</section>
+<section id="task-3.-testing-hypotheses." class="level3">
+<h3 class="anchored" data-anchor-id="task-3.-testing-hypotheses.">Task 3. Testing hypotheses.</h3>
+<p>We now want to test two directionality hypotheses to have a basic understanding of how our variables relate to each other. This is a step called exploratory data analysis.</p>
+<p>Firstly, we want to know the directionality of the relationship between how well students coped during lockdown ‘COV_4’ and their impression of how the pandemic has impacted their academic performance ‘COV_10’.</p>
+<p><strong>Q1.</strong> Calculate the correlation between COV_4 and COV_10. using ‘Kendall’s tau-b’. <strong>NOTE:</strong> We use this statistic because COV_10 is technically ordinal, rather than scale. You use the same guidelines as Pearson’s r to assess strength i.e.&nbsp;0.1, 0.3, and 0.5 for weak, moderate, and strong, respectively.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cor.test</span>(df<span class="sc">$</span>COV_4, df<span class="sc">$</span>COV_10, <span class="at">method =</span> <span class="fu">c</span> (<span class="st">"kendall"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Kendall's rank correlation tau
+
+data:  df$COV_4 and df$COV_10
+z = -4.4807, p-value = 7.441e-06
+alternative hypothesis: true tau is not equal to 0
+sample estimates:
+       tau 
+-0.3185941 </code></pre>
+</div>
+</div>
+<p><strong>Q2.</strong> What do the correlation coefficient tell us about the relationship between how well someone thought they coped overall during lockdown (COV_4) and how they feel the pandemic affected their academic performance (COV_10). Make note of: a. The direction of the correlation. <strong>HINT:</strong> Refer to the codebook for how the response scales are for both variables. b. The strength of the correlation. c.&nbsp;Whether the correlation is statistically significant.</p>
+<p><strong>Q3.</strong> Do you think having a worse experience of lockdown overall tended to result in poorer academic performance, or did poorer academic performance result in a worse experience of lockdown overall? What do the correlational data tell us about which is more likely?</p>
+<p><strong>Q4.</strong> We want to know the directionality of the relationship between how well students coped during lockdown ‘COV_4’ and their financial stress. Calculate correlation between COV_4 and the financial stress composite variable that you created, using ‘Pearson’ correlation.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cor.test</span>(df<span class="sc">$</span>COV_4, df<span class="sc">$</span>SFSS_A, <span class="at">method =</span> <span class="fu">c</span> (<span class="st">"pearson"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Pearson's product-moment correlation
+
+data:  df$COV_4 and df$SFSS_A
+t = -0.56441, df = 135, p-value = 0.5734
+alternative hypothesis: true correlation is not equal to 0
+95 percent confidence interval:
+ -0.2144895  0.1201740
+sample estimates:
+       cor 
+-0.0485194 </code></pre>
+</div>
+</div>
+<p><strong>Q5.</strong>. What does the correlation coefficient tell us about the relationship between how well someone thought they coped overall during lockdown (COV_4) and their financial stress?</p>
+<p><em>The End</em></p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left"><span class="container"><strong>Made with <a href="https://quarto.org/docs/get-started/hello/rstudio.html" target="_blank">Posit Quarto on RStudio</a></strong></span></div>   
+    <div class="nav-footer-right"><span class="container"><strong><a href="https://github.com/usman-afzali/PSYC344" target="_blank">PSYC344 Github Repository</a></strong></span></div>
+  </div>
+</footer>
+
+
+
+</body></html>
