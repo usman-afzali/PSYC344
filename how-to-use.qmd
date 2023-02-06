@@ -14,6 +14,8 @@ title-block-banner: false
 ---
 ## Labs
 
+First, let's learn how to use the available code for `lab files`.
+
 #### Using **Lab Files**
 
 The `R` code in this website is executable. Each of the lab files is a `Quarto Markdwon` or `.qmd` document. 
@@ -34,24 +36,64 @@ If you want to access the very `.qmd` documents to use and replicate the code, y
 
 ![RStudio Interface 2](rstudio-interf-2.png)
 
+::: callout-note
+## Repo
+`Lab files` are within the `labs` folder in [Github Repo](https://github.com/usman-afzali/PSYC344).
+:::
+
 #### Lab 1 and 2
 
-These labs are not included here as they don't involve any data analysis. First, let's learn how to use the available code for `lab files`.
+These labs are not included as they don't involve any data analysis. 
 
 #### Lab 3: Descriptive statistics
 
-Use `Lab3-Descriptive-Stats.qmd`.
+Use the file `Lab3-Descriptive-Stats.qmd`.
 
 #### Lab 4: EFA and CFA
 
 Use `Lab4-EFA-and-CFA.qmd`.
 
+#### Lab 5: *t*-test
+
+Use `Lab5-t-test.qmd`.
+
+::: callout-note
+## More to come
+Further lab files are yet to be added.
+:::
+
 ## Slides
 
-Slides are made using `revealjs` on `Quarto`. The process of using them is similar as using the other `.qmd` documents explained above. Once they are opened in `RStudio`, the `Present` button from the `Presentation` tab can be used to open the presentation in the local browser - that can be presented from there.
+Slides are made using `revealjs` on `Quarto`. There are three ways to use them:
+
+1. Use live: From [Presentations](https://usman-afzali.github.io/PSYC344/presentations.html), click the corresponding lab. They can be used live simply by clicking on them and using the keyboard `arrow keys`.
+
+2. Save as pdf: Get to the corresponding lab as explained above. This option only works with `Google Chrome` as explained [here](https://quarto.org/docs/presentations/revealjs/presenting.html#print-to-pdf).
+
+3. The `revealjs` files: The original code files on [Github Repo](https://github.com/usman-afzali/PSYC344) are in the `presentations` folder. 
+
+The process of using them is similar as using any other `.qmd` documents explained above. Once they are opened in `RStudio`, the `Present` button from the `Presentation` tab can be used to open the presentation in the local browser - that can be presented from there.
 
 #### Intro to Week 9
 
 Use `Intro-to-Week9.qmd`.
+
+#### Intro to Week 10
+
+Use `Intro-to-Week10.qmd`.
+
+#### Intro to Week 11
+
+Use `Intro-to-Week11.qmd`.
+
+#### Intro to Week 12
+
+Use `Intro-to-Week12.qmd`.
+
+#### Exam guidelines
+
+Use `exam-guidelines.qmd`.
+
+------------------------------------------------------------------------------
 
 
