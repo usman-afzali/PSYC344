@@ -3,7 +3,7 @@ title: "Intro to Week 11"
 subtitle: "PSYC344"
 author: "Dr Usman Afzali"
 institute: "University of Canterbury"
-date: today
+date: 2023 01 30
 format: 
   revealjs:
     theme: simple

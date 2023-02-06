@@ -3,7 +3,7 @@ title: "Exam Guidelines"
 subtitle: "PSYC344"
 author: "Dr Usman Afzali"
 institute: "University of Canterbury"
-date: today
+date: 2023 02 08
 format: 
   revealjs:
     theme: simple
