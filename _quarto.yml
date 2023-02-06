@@ -29,8 +29,8 @@ website:
         file: labs.qmd
       - text: "Presentations"
         file: presentations.qmd
-      - text: "Course Outline/Topics"
-        file: outline.html
+      - text: "Course Outline"
+        file: outline.qmd
     right:
       - icon: github
         href: https://github.com/usman-afzali/psyc344
