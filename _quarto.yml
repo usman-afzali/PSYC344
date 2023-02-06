@@ -31,6 +31,9 @@ website:
         file: presentations.qmd
       - text: "Course Outline/Topics"
         file: outline.qmd
+    right:
+      - icon: github
+        href: https://github.com/usman-afzali/psyc344
 
     page-navigation: true
 
