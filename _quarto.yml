@@ -29,6 +29,8 @@ website:
         file: labs.qmd
       - text: "Presentations"
         file: presentations.qmd
+      - text: "How to Use2?"
+        file: how-to-use.qmd
       - text: "Course Outline"
         file: CopyOfintro.qmd
     right:
