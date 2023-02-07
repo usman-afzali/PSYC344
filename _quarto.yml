@@ -30,7 +30,7 @@ website:
       - text: "Presentations"
         file: presentations.qmd
       - text: "Course Outline"
-        file: CopyOfintro.qmd
+        file: outline.qmd
     right:
       - icon: github
         href: https://github.com/usman-afzali/psyc344

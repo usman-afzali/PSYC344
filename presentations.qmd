@@ -1,5 +1,5 @@
 ---
-title: "Presentataions"
+title: "Presentations"
 listing:
   id: recap-listings2
   contents: presentations

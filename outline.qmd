@@ -12,6 +12,7 @@ listing:
 page-layout: full
 title-block-banner: false
 ---
+
 ## Whakamahuki | Description
 
 This intermediate course in research methods and statistics will guide you through the key steps of conducting psychological research that ultimately benefits and influences society. The lectures will cover a selection of topics on designing a project with consideration of research ethics, analysing and interpreting psychology data with rigour, and disseminating research findings for impact. The laboratory classes and assessments provide further experience in designing psychological research and writing up research in standard APA-style format.
