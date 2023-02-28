@@ -24,63 +24,56 @@ format:
 
 ## Guidelines {background-color="blue"}
 
-Please read the online invigilation guidelines on LEARN in the “Aromatawai | Assessment” section under the final exam heading
+Please read the online invigilation guidelines on LEARN in the "Aromatawai \| Assessment" section under the final exam heading
 
 ::: incremental
 -   Make sure you are familiar with your computer set-up and its necessary software (Zoom, internet). You need to have a working webcam and mic
 
 -   Arrange for a well-lit quiet space to complete your exam. No one can be in the room with you. Ensure that your internet will be working during the exam.
-
 :::
 
 ## Guidelines {background-color="blue"}
 
--  You must log into your designated Zoom 20-30 mins prior to your exam so your invigilator can check your photo ID. Use the bathroom beforehand! 
+-   You must log into your designated Zoom 20-30 mins prior to your exam so your invigilator can check your photo ID. Use the bathroom beforehand!
 
 ## Studying for an Open-book Exam (from Dr Jen Wong) {background-color="blue"}
 
 ::: incremental
-
 -   There will be 40 multiple choice and 5 short answer questions on the exam. Within a 2-hour timeframe, you will not have enough time to search and consult your lecture notes for each question.
 
 -   It can help to organise your lecture notes, so you know where to find information if you do need to refer to it
-
 :::
 
 ## Studying for an Open-book Exam (from Dr Jen Wong) {background-color="blue"}
 
 ::: incremental
-
 -   You still need to study for an open-book exam! Most questions will assess your understanding, not memorization of PSYC344 concepts
 
 -   Create your own notes
-
 :::
+
 ## Studying for an Open-book Exam (from Dr Jen Wong) {background-color="blue"}
 
-**Resources:** 
+**Resources:**
 
 -   Weekly lecture quizzes with specific or general feedback now available
 
--   Andy Field’s MC practice questions: [https://edge.sagepub.com/field5e/multiple-choice-quiz](https://edge.sagepub.com/field5e/multiple-choice-quiz) 
-
+-   Andy Field's MC practice questions: <https://edge.sagepub.com/field5e/multiple-choice-quiz>
 
 ## Studying for an Open-book Exam (from Dr Jen Wong) {background-color="blue"}
 
-
-**Online guides:** 
+**Online guides:**
 
 -   Creating notes, conceptual mind maps
 
--   [https://www.lib.sfu.ca/about/branches-depts/slc/learning/exam-types/open-book-exams](https://www.lib.sfu.ca/about/branches-depts/slc/learning/exam-types/open-book-exams)
+-   <https://www.lib.sfu.ca/about/branches-depts/slc/learning/exam-types/open-book-exams>
 
--   [https://www.trentu.ca/academicskills/how-guides/how-study/prepare-and-write-exams/preparing-online-open-book-exam](https://www.trentu.ca/academicskills/how-guides/how-study/prepare-and-write-exams/preparing-online-open-book-exam)
+-   <https://www.trentu.ca/academicskills/how-guides/how-study/prepare-and-write-exams/preparing-online-open-book-exam>
 
 ## Studying for an Open-book Exam (from Dr Jen Wong) {background-color="blue"}
 
 **Test-taking strategy**
 
--   [https://www.educationcorner.com/openbook-tests.html](https://www.educationcorner.com/openbook-tests.html) 
+-   <https://www.educationcorner.com/openbook-tests.html>
 
--   [https://www.student.unsw.edu.au/preparing-open-book-exams](https://www.student.unsw.edu.au/preparing-open-book-exams) 
-
+-   <https://www.student.unsw.edu.au/preparing-open-book-exams>

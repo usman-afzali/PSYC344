@@ -481,5 +481,12 @@
     "title": "How to use this website?",
     "section": "Slides",
     "text": "Slides\nSlides are made using revealjs on Quarto. There are three ways to use them:\n\nUse live: From Presentations, click the corresponding presentation. They can be displayed live simply by clicking on them and using the keyboard arrow keys.\nSave as pdf: Get to the corresponding presentation as explained above. This option only works with Google Chrome as explained here.\nThe revealjs files: The original code files on Github Repo are inside the presentations folder.\n\nThe process of using them is similar as using any other .qmd documents explained above. Once they are opened in RStudio, the Present button from the Presentation tab can be used to open the presentation in the local browser - that can be presented from there.\n\nIntro to Week 9\nUse Intro-to-Week9.qmd.\n\n\nIntro to Week 10\nUse Intro-to-Week10.qmd.\n\n\nIntro to Week 11\nUse Intro-to-Week11.qmd.\n\n\nIntro to Week 12\nUse Intro-to-Week12.qmd.\n\n\nExam guidelines\nUse exam-guidelines.qmd."
+  },
+  {
+    "objectID": "presentations/Exam prep/exam-prep.html",
+    "href": "presentations/Exam prep/exam-prep.html",
+    "title": "Exam Guidelines",
+    "section": "",
+    "text": "Date and time: 13 Feb 2023 at 10:00am\nDuration: 2 hours\nStyle: Open book. You may use any written, printed, or electronic materials. However, you must not collaborate or communicate with anyone else regarding the contents of the exam.\nCalculator: Not needed/not permitted\nInvigilation: Via Zoom\nMedium: Learn quiz activity"
   }
 ]
