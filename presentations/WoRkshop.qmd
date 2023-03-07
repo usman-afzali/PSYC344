@@ -44,7 +44,7 @@ of a glorious day.
 ## Feedback and User Group {background-color="#346bc8"}
 
 ::: incremental
--   Feedback ink to be sent today
+-   Feedback link to be shared today
 -   R User Group - please email me
 :::
 
