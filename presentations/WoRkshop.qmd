@@ -1,0 +1,77 @@
+---
+title: "WoRkshop"
+
+date: 2023 03 08
+format: 
+  revealjs:
+    theme: simple
+    highlight-style: github
+    slide-number: c/t
+editor: 
+  markdown: 
+    wrap: 72
+---
+
+## Karakia Whakatūwhera {background-color="#346bc8"}
+
+::: {layout="[[50, 50], [100]]"}
+Whakataka te hau ki te uru/ Whakataka te hau ki te tonga/ Kia mākinakina
+ki uta/ Kia mātaratara ki tai/ E hī ake ana te atakura/ He tio, he huka,
+he hau hū/ Tīhei mauri ora!
+
+Cease the winds from the west/ Cease the winds from the south/ Let the
+breeze blow over the land/ Let the breeze blow over the ocean/ Let the
+red-tipped dawn come with a sharpened air./ A touch of frost, a promise
+of a glorious day.
+:::
+
+# Kauhau {background-color="orange"}
+
+::: incremental
+-   Welcome and house keeping ~ 5 mins
+-   R: tests, toolboxes, and visualisation: 9:35am - 12:25pm: Roland and Bethany
+-   What is next and feedback ~ 5 mins
+:::
+
+## House keeping {background-color="#346bc8"}
+
+-   Fill in the sheet please!
+
+# Over to Roland and Beth {background-color="orange"}
+
+# What is next and feedback {background-color="orange"}
+
+## Feedback and User Group {background-color="#346bc8"}
+
+::: incremental
+-   Feedback ink to be sent today
+-   R User Group - please email me
+:::
+
+## Upcoming 1: Open Science Workshop {background-color="#346bc8"}
+
+**Part 1:** Wednesday 15 March, 1pm - 3pm, Rehua 528
+
+**Part 2:** Friday 17 March, 1pm - 3pm, Rehua 101
+
+## Upcoming 2: Quarto demonstration {background-color="#346bc8"}
+
+::: {layout="[[60, 40], [100]]"}
+-   Create documents with embedded code
+-   Or, presentation slides
+-   Or, a website
+-   Early-bird registration starting today
+
+![](/IMG_4008.jpg)
+:::
+
+## Karakia Whakatūwhera {background-color="#346bc8"}
+
+::: {layout="[[50, 50], [100]]"}
+Unuhia, unuhia/ Te pou, te pou/ Kia wātea, kia wātea/ Āe, kua wātea
+
+Remove, uplift/ The posts/ In order to be free/ Yes, it has been
+cleared/
+:::
+
+# THE END {background-color="orange"}

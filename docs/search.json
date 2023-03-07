@@ -137,7 +137,7 @@
     "href": "presentations.html",
     "title": "Presentations",
     "section": "",
-    "text": "Intro to Week 9\n\n\nPSYC344\n\n\n\n\n\n\n\n\n\nJan 16, 2023\n\n\nDr Usman Afzali\n\n\n\n\n\n\n\n\nIntro to Week 10\n\n\nPSYC344\n\n\n\n\n\n\n\n\n\nJan 23, 2023\n\n\nDr Usman Afzali\n\n\n\n\n\n\n\n\nIntro to Week 11\n\n\nPSYC344\n\n\n\n\n\n\n\n\n\nJan 30, 2023\n\n\nDr Usman Afzali\n\n\n\n\n\n\n\n\nIntro to Week 12\n\n\nPSYC344\n\n\n\n\n\n\n\n\n\nFeb 6, 2023\n\n\nDr Usman Afzali\n\n\n\n\n\n\n\n\nExam Guidelines\n\n\nPSYC344\n\n\n\n\n\n\n\n\n\nFeb 8, 2023\n\n\nDr Usman Afzali\n\n\n\n\n\n\nNo matching items"
+    "text": "Intro to Week 9\n\n\nPSYC344\n\n\n\n\n\n\n\n\n\nJan 16, 2023\n\n\nDr Usman Afzali\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntro to Week 10\n\n\nPSYC344\n\n\n\n\n\n\n\n\n\nJan 23, 2023\n\n\nDr Usman Afzali\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntro to Week 11\n\n\nPSYC344\n\n\n\n\n\n\n\n\n\nJan 30, 2023\n\n\nDr Usman Afzali\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntro to Week 12\n\n\nPSYC344\n\n\n\n\n\n\n\n\n\nFeb 6, 2023\n\n\nDr Usman Afzali\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nExam Guidelines\n\n\nPSYC344\n\n\n\n\n\n\n\n\n\nFeb 8, 2023\n\n\nDr Usman Afzali\n\n\n\n\n\n\n  \n\n\n\n\nWoRkshop\n\n\n\n\n\n\n\n\n\n\n\n\nMar 8, 2023\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "presentations/week09/Intro-to-Week9.html#kauhau",
@@ -488,5 +488,138 @@
     "title": "Exam Guidelines",
     "section": "",
     "text": "Date and time: 13 Feb 2023 at 10:00am\nDuration: 2 hours\nStyle: Open book. You may use any written, printed, or electronic materials. However, you must not collaborate or communicate with anyone else regarding the contents of the exam.\nCalculator: Not needed/not permitted\nInvigilation: Via Zoom\nMedium: Learn quiz activity"
+  },
+  {
+    "objectID": "presentations/rWorkshop.html#pipeline",
+    "href": "presentations/rWorkshop.html#pipeline",
+    "title": "WoRkshop",
+    "section": "Pipeline",
+    "text": "Pipeline\n\nEEGLab Preprocessing - Delorme"
+  },
+  {
+    "objectID": "presentations/rWorkshop.html#referencing",
+    "href": "presentations/rWorkshop.html#referencing",
+    "title": "WoRkshop",
+    "section": "Referencing",
+    "text": "Referencing\n\n\nWhy do we reference?\nProcedure: Use the available dataset from Learn Lab 2 demo dataset.\nTask 1: Read the dataset into EEGLab, and report attributes. Insert a screenshot of the attributes too.\nTask 2: Elaborate on what the attributes say about referencing? And how we remedy that?"
+  },
+  {
+    "objectID": "presentations/rWorkshop.html#referencing-to-m2",
+    "href": "presentations/rWorkshop.html#referencing-to-m2",
+    "title": "WoRkshop",
+    "section": "Referencing to M2",
+    "text": "Referencing to M2\n\n\nUse Tools -> re-reference the data.\nTask 3: Compare the attributes to the original dataset. Is there any discrepancy? If yes, why?\nIf you haven’t picked answer to “why” yet, plot the data again and observe closely."
+  },
+  {
+    "objectID": "presentations/rWorkshop.html#filtering",
+    "href": "presentations/rWorkshop.html#filtering",
+    "title": "WoRkshop",
+    "section": "Filtering",
+    "text": "Filtering\n\n\nWhy do we filter data?\nMany sources of noise, such as the 60Hz line noise, consist mainly of very high frequencies or very low frequencies, whereas most of the useful information in an EEG or ERP waveform is at intermediate frequencies (between approximately 0.1Hz and 50Hz). [@handbook2016]"
+  },
+  {
+    "objectID": "presentations/rWorkshop.html#filtering-contd.",
+    "href": "presentations/rWorkshop.html#filtering-contd.",
+    "title": "WoRkshop",
+    "section": "Filtering contd….",
+    "text": "Filtering contd….\n\n\nConsequently, the noise can often be reduced with minimal impact on the EEG/ERP waveform by filtering out the very low and/or very high frequencies.\nDelorme recommends filtering at 0.5.\nUse Tools -> Filter data -> basic FIR Filter. Type 0.5 in the Lower edge\nDC offset: https://relaytraining.com/what-is-dc-offset-ask-chris/"
+  },
+  {
+    "objectID": "presentations/rWorkshop.html#visaul-inspection.",
+    "href": "presentations/rWorkshop.html#visaul-inspection.",
+    "title": "WoRkshop",
+    "section": "Visaul inspection….",
+    "text": "Visaul inspection….\n\nTask 4: From Edit, select channel locations\nPlot channels as 2-D\nDo you see any anomaly? Comment!\nSubmit this as a pdf on Learn."
+  },
+  {
+    "objectID": "presentations/WoRkshop.html#karakia-whakatūwhera",
+    "href": "presentations/WoRkshop.html#karakia-whakatūwhera",
+    "title": "WoRkshop",
+    "section": "Karakia Whakatūwhera",
+    "text": "Karakia Whakatūwhera\n\n\n\nWhakataka te hau ki te uru/ Whakataka te hau ki te tonga/ Kia mākinakina ki uta/ Kia mātaratara ki tai/ E hī ake ana te atakura/ He tio, he huka, he hau hū/ Tīhei mauri ora!\n\n\nCease the winds from the west/ Cease the winds from the south/ Let the breeze blow over the land/ Let the breeze blow over the ocean/ Let the red-tipped dawn come with a sharpened air./ A touch of frost, a promise of a glorious day."
+  },
+  {
+    "objectID": "presentations/WoRkshop.html#sensible-covid-advice",
+    "href": "presentations/WoRkshop.html#sensible-covid-advice",
+    "title": "WoRkshop",
+    "section": "Sensible Covid Advice",
+    "text": "Sensible Covid Advice"
+  },
+  {
+    "objectID": "presentations/WoRkshop.html#karakia-whakatūwhera-1",
+    "href": "presentations/WoRkshop.html#karakia-whakatūwhera-1",
+    "title": "WoRkshop",
+    "section": "Karakia Whakatūwhera",
+    "text": "Karakia Whakatūwhera\n\n\n\nUnuhia, unuhia/ Te pou, te pou/ Kia wātea, kia wātea/ Āe, kua wātea\n\n\nRemove, uplift/ The posts/ In order to be free/ Yes, it has been cleared/"
+  },
+  {
+    "objectID": "presentations/WoRkshop.html#house-keeping",
+    "href": "presentations/WoRkshop.html#house-keeping",
+    "title": "WoRkshop",
+    "section": "House keeping",
+    "text": "House keeping\n\nFill in the sheet please!"
+  },
+  {
+    "objectID": "presentations/WoRkshop.html#over-to-roland-and-beth",
+    "href": "presentations/WoRkshop.html#over-to-roland-and-beth",
+    "title": "WoRkshop",
+    "section": "Over to Roland and Beth",
+    "text": "Over to Roland and Beth"
+  },
+  {
+    "objectID": "presentations/WoRkshop.html#what-is-next-and-feedback",
+    "href": "presentations/WoRkshop.html#what-is-next-and-feedback",
+    "title": "WoRkshop",
+    "section": "What is next and feedback",
+    "text": "What is next and feedback"
+  },
+  {
+    "objectID": "presentations/WoRkshop.html#feedback",
+    "href": "presentations/WoRkshop.html#feedback",
+    "title": "WoRkshop",
+    "section": "Feedback",
+    "text": "Feedback"
+  },
+  {
+    "objectID": "presentations/WoRkshop.html#feedback-and-user-group",
+    "href": "presentations/WoRkshop.html#feedback-and-user-group",
+    "title": "WoRkshop",
+    "section": "Feedback and User Group",
+    "text": "Feedback and User Group\n\n\nFeedback ink to be sent today\nR User Group - please email me"
+  },
+  {
+    "objectID": "presentations/WoRkshop.html#what-is-next",
+    "href": "presentations/WoRkshop.html#what-is-next",
+    "title": "WoRkshop",
+    "section": "What is next?",
+    "text": "What is next?"
+  },
+  {
+    "objectID": "presentations/WoRkshop.html#open-science-workshop",
+    "href": "presentations/WoRkshop.html#open-science-workshop",
+    "title": "WoRkshop",
+    "section": "Open Science Workshop",
+    "text": "Open Science Workshop\nPart 1: Wednesday 15 March, 1pm - 3pm, Rehua 528\nPart 2: Friday 17 March, 1pm - 3pm, Rehua 101"
+  },
+  {
+    "objectID": "presentations/WoRkshop.html#quarto-demonstration",
+    "href": "presentations/WoRkshop.html#quarto-demonstration",
+    "title": "WoRkshop",
+    "section": "Quarto demonstration",
+    "text": "Quarto demonstration\n\n\n\n\nCreate documents with embedded code\nOr, presentation slides\nOr, a website\nEarly-bird registration starting today"
+  },
+  {
+    "objectID": "presentations/WoRkshop.html#upcoming-1-open-science-workshop",
+    "href": "presentations/WoRkshop.html#upcoming-1-open-science-workshop",
+    "title": "WoRkshop",
+    "section": "Upcoming 1: Open Science Workshop",
+    "text": "Upcoming 1: Open Science Workshop\nPart 1: Wednesday 15 March, 1pm - 3pm, Rehua 528\nPart 2: Friday 17 March, 1pm - 3pm, Rehua 101"
+  },
+  {
+    "objectID": "presentations/WoRkshop.html#upcoming-2-quarto-demonstration",
+    "href": "presentations/WoRkshop.html#upcoming-2-quarto-demonstration",
+    "title": "WoRkshop",
+    "section": "Upcoming 2: Quarto demonstration",
+    "text": "Upcoming 2: Quarto demonstration\n\n\n\n\nCreate documents with embedded code\nOr, presentation slides\nOr, a website\nEarly-bird registration starting today"
   }
 ]
