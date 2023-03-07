@@ -1,7 +1,6 @@
 ---
 title: "Simple Analysis and Data Vis"
 author: "Bethany Growns"
-format: pdf
 date: 2023 03 08
 code-fold: false
 filters:
