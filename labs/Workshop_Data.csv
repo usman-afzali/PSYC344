@@ -1,0 +1,175 @@
+ID,BaseRate,Feedback,age,gender,background,Accuracy
+5,Equal,Present,22,Male,Asian,0.614285714
+6,Equal,Absent,34,Male,White,0.857142857
+9,Equal,Present,24,Male,White,0.714285714
+10,Equal,Present,23,Female,Asian,0.628571429
+12,Equal,Absent,21,Male,White,0.628571429
+14,Equal,Absent,33,Male,White,0.742857143
+18,Equal,Present,20,Male,Asian,0.571428571
+27,Equal,Present,53,Female,White,0.628571429
+29,Equal,Absent,23,Male,White,0.6
+33,Equal,Absent,27,Male,White,0.642857143
+36,Equal,Absent,28,Male,White,0.685714286
+41,Equal,Absent,22,Male,Indian,0.6
+42,Equal,Present,25,Female,Please specify:,0.671428571
+46,Equal,Present,20,Male,Asian,0.657142857
+48,Equal,Absent,23,Male,White,0.771428571
+50,Equal,Present,32,Male,White,0.685714286
+51,Equal,Absent,52,Female,White,0.771428571
+54,Equal,Absent,36,Male,White,0.757142857
+55,Equal,Absent,28,Female,White,0.471428571
+56,Equal,Present,31,Male,White,0.657142857
+62,Equal,Present,28,Female,White,0.714285714
+63,Equal,Present,25,Male,African American,0.657142857
+65,Equal,Present,24,Female,Asian,0.742857143
+67,Equal,Absent,39,Male,Asian,0.757142857
+69,Equal,Absent,19,Female,White,0.771428571
+78,Equal,Present,22,Female,Asian,0.785714286
+79,Equal,Absent,28,Male,African American,0.614285714
+80,Equal,Present,34,Male,White,0.685714286
+81,Equal,Present,44,Female,White,0.671428571
+88,Equal,Absent,30,Male,White,0.657142857
+105,Equal,Absent,20,Female,White,0.728571429
+117,Equal,Absent,31,Female,Asian,0.657142857
+118,Equal,Absent,25,Female,White,0.728571429
+119,Equal,Absent,31,Male,African American,0.485714286
+121,Equal,Present,22,Female,White,0.757142857
+122,Equal,Present,22,Male,Asian,0.657142857
+125,Equal,Present,19,Gender diverse (please specify):,White,0.685714286
+128,Equal,Absent,18,Male,African American,0.7
+130,Equal,Present,20,Female,White,0.657142857
+131,Equal,Absent,36,Male,White,0.671428571
+134,Equal,Present,39,Female,White,0.842857143
+135,Equal,Present,21,Female,Asian,0.642857143
+137,Equal,Present,27,Female,White,0.6
+138,Equal,Absent,20,Female,Asian,0.642857143
+145,Equal,Present,24,Female,White,0.628571429
+148,Equal,Absent,20,Male,White,0.742857143
+151,Equal,Absent,22,Female,White,0.8
+156,Equal,Present,23,Male,White,0.657142857
+158,Equal,Present,22,Female,White,0.771428571
+167,Equal,Absent,51,Gender diverse (please specify):,White,0.785714286
+170,Equal,Absent,32,Male,Asian,0.7
+175,Equal,Absent,18,Female,White,0.742857143
+182,Equal,Absent,20,Female,White,0.742857143
+183,Equal,Present,38,Female,White,0.6
+185,Equal,Absent,46,Gender diverse (please specify):,White,0.814285714
+188,Equal,Absent,19,Male,White,0.471428571
+194,Equal,Present,20,Male,Hispanic,0.757142857
+195,Equal,Absent,33,Male,White,0.671428571
+196,Equal,Present,20,Male,Asian,0.6
+197,Equal,Absent,18,Male,Asian,0.771428571
+198,Equal,Absent,18,Female,Asian,0.742857143
+200,Equal,Present,29,Female,White,0.728571429
+201,Equal,Present,22,Female,African American,0.785714286
+202,Equal,Present,30,Female,White,0.571428571
+204,Equal,Present,19,Female,Asian,0.685714286
+207,Equal,Absent,68,Female,White,0.785714286
+212,Equal,Present,40,Female,White,0.728571429
+215,Equal,Absent,20,Male,White,0.857142857
+218,Equal,Present,34,Male,White,0.628571429
+220,Equal,Present,19,Female,Asian,0.514285714
+222,Equal,Present,34,Male,Asian,0.614285714
+228,Equal,Absent,29,Male,Hispanic,0.571428571
+239,Equal,Present,33,Female,White,0.7
+240,Equal,Absent,26,Female,Asian,0.728571429
+241,Equal,Absent,30,Female,White,0.628571429
+244,Equal,Present,21,Male,White,0.628571429
+246,Equal,Absent,61,Male,White,0.628571429
+251,Equal,Absent,22,Male,White,0.714285714
+254,Equal,Absent,25,Female,White,0.771428571
+255,Equal,Present,29,Male,African American,0.628571429
+256,Equal,Absent,32,Male,African American,0.728571429
+261,Equal,Present,44,Female,White,0.628571429
+264,Equal,Absent,31,Female,White,0.814285714
+265,Equal,Absent,21,Female,White,0.742857143
+266,Equal,Present,23,Female,White,0.685714286
+269,Equal,Present,48,Female,White,0.671428571
+271,Equal,Present,31,Female,Hispanic,0.6
+284,Equal,Present,30,Female,Asian,0.657142857
+285,Equal,Absent,27,Male,White,0.728571429
+286,Equal,Present,38,Female,White,0.571428571
+2,Low,Present,24,Male,White,0.890243902
+4,Low,Absent,21,Female,African American,0.56097561
+17,Low,Absent,28,Female,White,0.768292683
+19,Low,Absent,19,Male,Hispanic,0.780487805
+21,Low,Present,21,Female,Asian,0.890243902
+23,Low,Present,21,Female,Hispanic,0.853658537
+25,Low,Present,28,Male,White,0.926829268
+28,Low,Present,18,Female,Asian,0.890243902
+30,Low,Absent,37,Female,White,0.719512195
+34,Low,Absent,30,Male,African American,0.731707317
+38,Low,Absent,36,Female,White,0.402439024
+40,Low,Absent,25,Female,White,0.646341463
+43,Low,Present,19,Male,White,0.670731707
+44,Low,Present,35,Female,Hispanic,0.804878049
+45,Low,Absent,18,Female,Hispanic,0.585365854
+53,Low,Absent,31,Male,White,0.707317073
+57,Low,Absent,29,Male,White,0.536585366
+58,Low,Absent,32,Female,White,0.658536585
+60,Low,Present,22,Male,Asian,0.890243902
+61,Low,Absent,28,Female,Asian,0.390243902
+73,Low,Present,48,Male,White,0.87804878
+75,Low,Present,21,Female,White,0.670731707
+76,Low,Present,23,Male,White,0.93902439
+77,Low,Absent,19,Female,Asian,0.646341463
+82,Low,Absent,35,Male,African American,0.597560976
+84,Low,Absent,31,Male,White,0.768292683
+90,Low,Absent,23,Female,Asian,0.548780488
+103,Low,Present,36,Male,White,0.87804878
+106,Low,Absent,35,Female,Indigenous Native American,0.780487805
+107,Low,Absent,24,Male,African American,0.512195122
+110,Low,Present,31,Female,White,0.902439024
+111,Low,Present,37,Female,White,0.951219512
+120,Low,Absent,46,Male,White,0.768292683
+123,Low,Present,20,Female,Asian,0.902439024
+127,Low,Absent,27,Female,White,0.695121951
+129,Low,Absent,21,Male,White,0.731707317
+139,Low,Present,50,Female,White,0.865853659
+140,Low,Present,32,Female,White,0.87804878
+141,Low,Absent,33,Female,White,0.890243902
+142,Low,Absent,22,Female,White,0.731707317
+152,Low,Present,22,Male,White,0.914634146
+153,Low,Present,30,Male,White,0.756097561
+160,Low,Absent,42,Female,Asian,0.573170732
+161,Low,Present,31,Male,Asian,0.865853659
+163,Low,Present,70,Female,White,0.902439024
+164,Low,Absent,33,Male,White,0.573170732
+169,Low,Present,21,Male,White,0.865853659
+171,Low,Absent,27,Gender diverse (please specify):,White,0.756097561
+174,Low,Present,40,Male,White,0.853658537
+177,Low,Absent,29,Female,White,0.695121951
+178,Low,Present,30,Male,White,0.951219512
+180,Low,Absent,23,Male,White,0.804878049
+181,Low,Present,26,Male,White,0.890243902
+184,Low,Present,33,Male,White,0.914634146
+191,Low,Absent,19,Female,Asian,0.695121951
+192,Low,Absent,28,Female,Hispanic,0.536585366
+193,Low,Absent,36,Female,White,0.658536585
+199,Low,Absent,33,Female,White,0.487804878
+206,Low,Present,31,Gender diverse (please specify):,Please specify:,0.853658537
+210,Low,Absent,30,Male,White,0.817073171
+216,Low,Present,34,Male,White,0.926829268
+217,Low,Absent,18,Female,White,0.865853659
+219,Low,Present,22,Male,White,0.951219512
+223,Low,Present,19,Male,White,0.902439024
+227,Low,Present,36,Male,White,0.93902439
+229,Low,Absent,25,Male,African American,0.585365854
+235,Low,Present,37,Male,White,0.841463415
+237,Low,Absent,26,Female,African American,0.902439024
+238,Low,Absent,27,Male,Asian,0.646341463
+242,Low,Present,29,Female,African American,0.926829268
+243,Low,Present,18,Female,Hispanic,0.87804878
+247,Low,Present,58,Female,White,0.853658537
+248,Low,Absent,57,Female,White,0.707317073
+250,Low,Absent,56,Female,White,0.914634146
+257,Low,Present,69,Female,Hispanic,0.743902439
+272,Low,Present,29,Male,White,0.573170732
+273,Low,Absent,71,Male,White,0.56097561
+274,Low,Absent,67,Female,White,0.62195122
+276,Low,Present,21,Female,Hispanic,0.865853659
+277,Low,Absent,63,Female,White,0.463414634
+278,Low,Absent,36,Male,Asian,0.743902439
+280,Low,Absent,30,Female,Please specify:,0.5
+282,Low,Present,25,Male,White,0.926829268
+287,Low,Present,47,Female,White,0.829268293
