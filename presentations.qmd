@@ -13,5 +13,7 @@ title-block-banner: false
 page-navigation: true
 ---
 
+Note. These presentations are for demonstration purposes only, and do not represent the actual study material.
+
 ::: {#recap-listings2}
 :::

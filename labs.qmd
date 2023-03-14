@@ -13,5 +13,7 @@ title-block-banner: false
 page-navigation: true
 ---
 
+Note. These documents are for demonstration purposes. It will be ensured that the data used here are not the same as those used for internal assessments.
+
 ::: {#labs-listings}
 :::
