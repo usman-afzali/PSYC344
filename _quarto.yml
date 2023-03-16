@@ -8,12 +8,12 @@ website:
   
   page-footer:
     left: |
-      <span class="container"><strong>Made with [Posit Quarto on RStudio](https://quarto.org/docs/get-started/hello/rstudio.html){target="_blank"}</strong></span>
+      <span class="faux-block">Made with {{< fa brands r-project >}} and [Quarto](https://quarto.org/)</span>
     right: |
-      <span class="container"><strong>[PSYC344 Github Repository](https://github.com/usman-afzali/PSYC344){target="_blank"}</strong></span>
+      <span class="faux-block">[View the source at {{< fa brands github >}} GitHub](https://github.com/usman-afzali/PSYC344)</span>
     background: "#559BED"
   
-  search: 
+  search:
     location: navbar
     type: textbox
   navbar:
